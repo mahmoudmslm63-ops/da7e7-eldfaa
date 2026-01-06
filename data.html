@@ -1,38 +1,90 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>بيانات الطالب</title>
+  <meta charset="UTF-8">
+  <title>دحيح الدفعة - بيانات الطالب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <h1>بيانات الطالب</h1>
+<div class="container">
+  <h1>بيانات الطالب</h1>
 
-    <form action="result.html">
+  <label>اسم الطالب:</label>
+  <input type="text" placeholder="اكتب اسمك" required>
 
-    <label>اسم الطالب:</label><br>
-    <input type="text" required><br><br>
+  <label>الصف الدراسي:</label>
+  <select required>
+    <option value="">اختر الصف الدراسي</option>
+    <option>الصف الأول الثانوي</option>
+    <option>الصف الثاني الثانوي</option>
+    <option>الصف الثالث الثانوي</option>
+  </select>
 
-    <h3>بيانات المواد</h3>
+  <label>المواد الدراسية:</label>
+  <input type="text" placeholder="مثال: عربي، رياضة، فيزياء" required>
 
-    <label>المادة الأولى:</label><br>
-    <input type="text" placeholder="مثال: رياضيات" required><br>
-    <input type="number" placeholder="الدرجة من 100" required><br><br>
+  <a href="result.html"><button>احصل على الخطة</button></a>
 
-    <label>المادة الثانية:</label><br>
-    <input type="text" placeholder="مثال: فيزياء" required><br>
-    <input type="number" placeholder="الدرجة من 100" required><br><br>
-
-    <label>المادة الثالثة:</label><br>
-    <input type="text" placeholder="مثال: كيمياء" required><br>
-    <input type="number" placeholder="الدرجة من 100" required><br><br>
-
-    <label>عدد ساعات المذاكرة يوميًا:</label><br>
-    <input type="number" required><br><br>
-
-    <button type="submit">احصل على الخطة</button>
-
-</form>
+</div>
 
 </body>
 </html>
